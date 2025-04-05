@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Zetamac Score Tracker",
+    "version": "0.1",
+    "description": "Automatically records Zetamac scores.",
+    "permissions": [
+      "storage" 
+    ],
+    "icons": {
+      "48": "images/icon48.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/icon48.png"
+    },
+    "background": { 
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://arithmetic.zetamac.com/game*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
