@@ -3,6 +3,14 @@
     "name": "Zetamac Score Tracker",
     "version": "0.1",
     "description": "Automatically records Zetamac scores.",
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/graph.png"
+            ],
+          "matches": [] 
+        }
+    ],
     "permissions": [
       "storage" 
     ],

@@ -42,6 +42,34 @@
     #scoresList p:first-child {
         font-weight: bold; /* Optional: Make the most recent score bold */
     }
+
+    .iconContainer {
+      position: absolute;
+      top: 130px; 
+      right: 25px;
+    }
+    .icon-link{
+      border-radius: 50%;   
+      border-style: solid;
+      border-width: 1px;
+      display: inline-block; 
+      width: 30px;          
+      height: 30px;         
+      margin-right: 6px;    
+      vertical-align: middle;
+      border: 1px solid #333;
+
+      background-size: 80% 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      font-size: 0;
+      color: transparent;
+      text-decoration: none;
+    }
+    #chartsPage {
+      background-image: url('images/graph.png');
+    }
   </style>
 </head>
 <body>
@@ -51,6 +79,10 @@
   </div>
 
   <h1>My Zetamac Scores</h1>
+
+  <div class = "iconContainer">
+    <a href = "./charts.html" class = "icon-link" id = "chartsPage" title = "Charts"> Charts </a>
+  </div>
 
   <div class = "sortContainer">
     <label for = "sortSelector"> Sort by: </label>

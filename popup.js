@@ -10,7 +10,7 @@ function displayScores(scores, targetDiv) {
     scores.forEach(record => {
         const scoreElement = document.createElement('p');
         const date = new Date(record.timestamp);
-        const formattedDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+        const formattedDate = date.toLocaleDateString() /*+ ' ' + date.toLocaleTimeString()*/;
         scoreElement.textContent = `Score: ${record.score} (on ${formattedDate})`;
         targetDiv.appendChild(scoreElement);
       });
