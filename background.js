@@ -22,10 +22,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         });
       });
   
-      // Optional: Send a response back to the content script if needed
-      // sendResponse({ status: "Score received by background script" });
-      return true; // Indicate you might send an asynchronous response (good practice)
+      return true; 
     }
   });
   
-  console.log("Background service worker started."); // To confirm it loaded
+  console.log("Background service worker started.");
