@@ -1,4 +1,3 @@
-// Listen for messages from content scripts
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === "SCORE_FOUND") {
       console.log("Background script received score:", message.score);
