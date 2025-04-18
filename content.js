@@ -15,13 +15,11 @@ function checkForScore() {
         if (!isNaN(score)) {
           console.log("Successfully extracted score:", score); // Should show 58
   
-            // *** Send score to background script ***
             chrome.runtime.sendMessage({ type: "SCORE_FOUND", score: score }, (response) => {
                 if (chrome.runtime.lastError) {
-                    // Handle potential errors like the background script not being ready
                     console.error("Error sending message:", chrome.runtime.lastError.message);
                 } else {
-                    console.log("Response from background:", response); // Optional: check response
+                    console.log("Response from background:", response);
                 }
             });
   
@@ -36,10 +34,5 @@ function checkForScore() {
     }
   }
   
-  // --- Simple way to check periodically ---
-  // Zetamac seems to reload the page or heavily modify it for results,
-  // so running the check when the script loads might be enough after a game.
-  // For more dynamic sites, MutationObserver is better, but let's start simple.
-  // We'll try running it once after a short delay, assuming the results page has loaded.
-  setTimeout(checkForScore, 121000); // Check 1 second after script loads
+setTimeout(checkForScore, 121000);
   

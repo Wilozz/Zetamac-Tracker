@@ -6,6 +6,7 @@
     "web_accessible_resources": [
         {
             "resources": [
+                "./node_modules/chart.js/dist/chart.umd.js",
                 "images/graph.png"
             ],
           "matches": [] 
