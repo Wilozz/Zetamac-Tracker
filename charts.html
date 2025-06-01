@@ -4,71 +4,76 @@
   <title>Zetamac Scores</title>
   <style>
     body {
-        width: 400px;
-        height: 200px; 
-        max-height: 300px;
-        font-family: sans-serif;
-        font-size: 13px;
-        margin: 8px;
+      width: 400px;
+      height: 300px;
+      margin: 8px;
+      font-family: sans-serif;
+      font-size: 13px;
     }
+
     h1 {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 8px;
-      }
-    
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
     .iconContainer {
-        position: absolute;
-        top: 130px; 
-        right: 25px;
+      position: absolute;
+      top: 130px;
+      right: 25px;
     }
-    .icon-link{
-        border-radius: 50%;   
-        border-style: solid;
-        border-width: 1px;
-        display: inline-block; 
-        width: 30px;          
-        height: 30px;         
-        margin-right: 6px;    
-        vertical-align: middle;
-        border: 1px solid #333;
 
-        background-size: 80% 80%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        font-size: 0;
-        color: transparent;
-        text-decoration: none;
+    .icon-link {
+      border-radius: 50%;
+      border: 1px solid #333;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-right: 6px;
+      background-size: 80% 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-size: 0;
+      color: transparent;
+      text-decoration: none;
     }
+
     #homePage {
-        background-image: url('images/home.png');
+      background-image: url('images/home.png');
     }
-    #canvas {
-        display: block; /* Prevents extra space below */
-        width: 100% !important; /* Force width */
-        height: 100% !important;
-        color: aqua;
+
+    #chartContainer {
+      width: 100%;
+      height: 220px;
+      position: relative;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
     }
   </style>
 </head>
 <body>
 
-  <div id = "charts">
-    <p> Your charts will load here...</p>
+  <h1>Zetamac Progress</h1>
+
+  <div id="charts">
+    <p>Loading chart...</p>
   </div>
 
-  <div class = "iconContainer">
-    <a href = "./popup.html" class = "icon-link" id = "homePage" title = "home"> Home </a>
+  <div id="chartContainer">
+    <canvas id="scoreChart"></canvas>
   </div>
 
-  <div id = "chartContainer"> 
-    <canvas id = "scoreChart">
-
-    </canvas>
+  <div class="iconContainer">
+    <a href="./popup.html" class="icon-link" id="homePage" title="Home">Home</a>
   </div>
 
-  <script src = './node_modules/chart.js/dist/chart.umd.js'></script>
-  <script src = './charting.js'></script>
-  <script src = './popup.js'></script>
+  <!-- Load Chart.js -->
+  <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+
+  <!-- Your charting logic -->
+  <script src="./charting.js"></script>
+</body>
 </html>
