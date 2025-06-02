@@ -14,6 +14,8 @@ function setupDropdown(scores) {
 
         if (value === "30") {
             filtered = scores.slice(-30); 
+        } else if (value === "60") {
+            filtered = scores.slice(-60); 
         }
 
         renderChart(filtered)
